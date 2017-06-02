@@ -22,7 +22,7 @@ public class SubmitTicketAction extends HttpServlet {
 		double sum = current;
 		Calendar cal = Calendar.getInstance();
 		boolean wednesday = cal.get(Calendar.DAY_OF_WEEK) == Calendar.WEDNESDAY;
-		if (!wednesday) {
+		if (wednesday) {
 			System.out.println("It's wednesday!!");
 			WednesdayDiscountTicket ticket = new WednesdayDiscountTicket();
 			ticket.loadModifier();
